@@ -34,7 +34,7 @@ execute_maven_build()
   # Clean up after Maven run ....
   mvn clean
 
-  if [ -d "$HOME/.m2/repository" ]; then
+  if [ -d "$HOME/.m2/repository" ] && [ "$RM_BASE_CACHE" = "true" ]; then
     rm -rf $HOME/.m2/repository
   fi
 }
@@ -64,7 +64,7 @@ execute_gradle_build()
   # Clean up after Gradle run ....
   gradle clean
 
-  if [ -d "$HOME/.gradle/caches" ]; then
+  if [ -d "$HOME/.gradle/caches" ] && [ "$RM_BASE_CACHE" = "true" ]; then
     rm -rf $HOME/.gradle/caches
   fi
 }

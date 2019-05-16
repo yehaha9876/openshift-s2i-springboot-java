@@ -38,6 +38,12 @@
       "description": "Append Maven arguments"
     },
     {
+      "name": "RM_BASE_CACHE",
+      "displayName": "Maven or gradle clean cache",
+      "description": "Maven or gradle rm .m2 or .cache",
+      "value": "true"
+    },
+    {
       "name": "GRADLE_ARGS_APPEND",
       "displayName": "Gradle arguments to append",
       "description": "Append Gradle arguments"
@@ -117,6 +123,10 @@
 		{
 		  "name": "BUILD_TYPE",
 		  "value": "${BUILD_TYPE}"
+		},
+		{
+		  "name": "RM_BASE_CACHE",
+		  "value": "${RM_BASE_CACHE}"
 		}
 	    ]
           },
